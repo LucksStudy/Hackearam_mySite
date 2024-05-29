@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="cod.js"></script>
+    <title>Tabuada</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="rainbow">Gerador de Tabuada</h1>
+        <div class="input-container">
+            <label for="numero">Digite um número entre 1 e 10:</label>
+            <input type="number" id="numero" min="1" max="10"> <!-- Limitar o seletor de seta-->
+        </div>
+
+        <p id="error"></p>
+
+        <button class="botao botao-add" onclick="criarTabuada()">Criar Tabuada</button><!-- Função de criar tabela no botão -->
+
+        <table id="tabuada" class="table"></table>
+
+        <button class="botao botao-clear" id="clear" onclick="LimparInput()">Limpar</button> <!-- Botão de limpar tabela-->
+    </div>
+</body>
+
+</html>

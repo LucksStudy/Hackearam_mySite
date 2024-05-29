@@ -1,0 +1,188 @@
+.container {
+    display: flex; /* Define o container como um elemento flexbox */
+    flex-direction: column; /* Define a direção dos elementos filhos como coluna */
+    align-items: center; /* Centraliza os elementos filhos na horizontal dentro do container */
+    justify-content: center; /* Centraliza os elementos filhos na vertical dentro do container (por causa de flex-direction: column) */
+    height: 100vh; /* Define a altura do container como 100% da viewport */
+    margin: 0 auto;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+}
+
+.input-container label {
+    margin-right: 10px; /* Margin for the label */
+}
+
+.table {
+    border-collapse: collapse;
+    margin: 20px 0; /* Adiciona espaço acima e abaixo da tabela */
+    width: 25%;
+    align-self: center; /* Centraliza a tabela dentro do container flex */
+}
+
+td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) { /* Serve para selecionar linhas específicas de uma tabela com base em sua posição dentro da mesma */
+    background-color: rgb(255, 255, 255);
+}
+
+.botao {
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 5px 15px; /* Preenchimento aos botões */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer; /* Muda o cursor para ponteiro ao passar o mouse */
+    border-radius: 6px; /* Cantos arredondados aos botões */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Espaço entre os botões e a tabela */
+}
+
+.botao-add {
+    background-color: yellowgreen;
+    margin: 0 auto; /* Centraliza o botão */
+}
+
+.botao-clear {
+    width: 150px;
+    display: none;
+    background-color: maroon;
+    margin: auto;
+}
+
+.botao-add:hover {
+    background-color: rebeccapurple; /* Muda a cor quando passa o mouse por cima */
+}
+
+.botao-clear:hover {
+    background-color: rebeccapurple;
+}
+
+.botao:active {
+    background-color: yellowgreen;
+    transform: translateY(1px); /* Transformação de deslocamento vertical ao elemento */
+}
+
+.error {
+    color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo { /* Efeito rainbow que eu copiei da net por firula */
+    width: 400px;
+    height: 400px;
+    font-size: 5em;
+    float: left;
+    text-align: center;
+}
+
+.rainbow-bg {
+    animation: rainbow-bg 2.5s linear;
+    animation-iteration-count: infinite;
+}
+
+.rainbow {
+    animation: rainbow 3.0s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbow-bg {
+    100%, 0% {
+        background-color: rgb(255, 0, 0);
+    }
+    8% {
+        background-color: rgb(255, 127, 0);
+    }
+    16% {
+        background-color: rgb(255, 255, 0);
+    }
+    25% {
+        background-color: rgb(127, 255, 0);
+    }
+    33% {
+        background-color: rgb(0, 255, 0);
+    }
+    41% {
+        background-color: rgb(0, 255, 127);
+    }
+    50% {
+        background-color: rgb(0, 255, 255);
+    }
+    58% {
+        background-color: rgb(0, 127, 255);
+    }
+    66% {
+        background-color: rgb(0, 0, 255);
+    }
+    75% {
+        background-color: rgb(127, 0, 255);
+    }
+    83% {
+        background-color: rgb(255, 0, 255);
+    }
+    91% {
+        background-color: rgb(255, 0, 127);
+    }
+}
+
+@keyframes rainbow {
+    100%, 0% {
+        color: rgb(255, 0, 0);
+    }
+    8% {
+        color: rgb(255, 127, 0);
+    }
+    16% {
+        color: rgb(255, 255, 0);
+    }
+    25% {
+        color: rgb(127, 255, 0);
+    }
+    33% {
+        color: rgb(0, 255, 0);
+    }
+    41% {
+        color: rgb(0, 255, 127);
+    }
+    50% {
+        color: rgb(0, 255, 255);
+    }
+    58% {
+        color: rgb(0, 127, 255);
+    }
+    66% {
+        color: rgb(0, 0, 255);
+    }
+    75% {
+        color: rgb(127, 0, 255);
+    }
+    83% {
+        color: rgb(255, 0, 255);
+    }
+    91% {
+        color: rgb(255, 0, 127);
+    }
+}
